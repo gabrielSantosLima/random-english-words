@@ -9,15 +9,29 @@
 </head>
 <body>
     <h1>Random Words</h1>
-    <div class="input">
-        <label>Informe as palavras separadas por espaços</label>
-        <input type="text" placeholder="lista de palavras em inglês...">
-        <input type="text" placeholder="lista de traduções...">
-        <button>Sortear</button>
+    <p class="alert hide">Erro!</p>
+    <div class="content">
+        
+        <div class="input">
+            <h2>Insira as palavras que serão sorteadas</h2>
+
+            <label>Palavras em inglês *</label>
+            <input class="words" type="text">
+            
+            <label>Traduções *</label>
+            <input class="translations" type="text">
+            
+            <button class="sort-button">Sortear</button>
+            <label>* Informe as palavras separadas por espaços</label>
+        </div>
+        
+        
+        <div class="cards">
+            <h2>Clique na palavra para ver a sua tradução</h2>
+            <button class="card-button" data-translation="" data-word="">Aqui aparecerá a palavra sorteada</button>
+        </div>
     </div>
-    <div class="output">
-        <p class="palavra">Aqui aparecerá as palavras</p>
-    </div>
+    
     <script src="index.js"></script>
 </body>
 </html>
