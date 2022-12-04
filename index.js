@@ -70,8 +70,8 @@ function readInput(wordsInput, translationsInput){
 }
 
 function validateInput(textWords, textTranslations){
-    const splitedWords = splitTextsWhenHaveSpaces(textWords)
-    const splitedTranslations = splitTextsWhenHaveSpaces(textTranslations)
+    const splitedWords = splitTextsWhenCommon(textWords)
+    const splitedTranslations = splitTextsWhenCommon(textTranslations)
     const words = cleanPrepositionTo(splitedWords)
     const translations = cleanPrepositionTo(splitedTranslations)
 
@@ -85,8 +85,8 @@ function cleanPrepositionTo(array){
     return array.filter(value => value !== "" && value !== "to")
 }
 
-function splitTextsWhenHaveSpaces(text) { 
-    return text.split(' ')
+function splitTextsWhenCommon(text) { 
+    return text.split(',')
 }
 
 function setCards(words, translations){
